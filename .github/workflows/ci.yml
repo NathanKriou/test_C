@@ -1,0 +1,32 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install GCC
+      run: sudo apt-get install gcc
+
+    - name: Build
+      run: make
+
+    - name: Run tests
+      run: make test
+
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: compiled-binary
+        path: ./my_project  # Remplacez par le nom de votre binaire
