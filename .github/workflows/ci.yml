@@ -29,4 +29,4 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: compiled-binary
-        path: ./my_project  # Remplacez par le nom de votre binaire
+        path: ./githubC
