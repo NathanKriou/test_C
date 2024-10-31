@@ -1,12 +1,12 @@
 # Variables
 CC = gcc
-CFLAGS = -Wall -Wextra -g -I../Unity/src  # Ajoute le chemin d'inclusion
+CFLAGS = -Wall -Wextra -g -I/Unity/src  # Ajoute le chemin d'inclusion
 SRC = main.c fonction.c
 OBJ = $(SRC:.c=.o)
 EXEC = mon_projet
 TEST_SRC = test.c
 TEST_OBJ = $(TEST_SRC:.c=.o)
-UNITY_SRC = ../Unity/src/unity.c  # Chemin vers unity.c
+UNITY_SRC = /Unity/src/unity.c  # Chemin vers unity.c
 
 # Cible par défaut
 all: $(EXEC)
